@@ -63,17 +63,15 @@ body, button {
 //Contenedores genéricos > En su interior, elementos propios de cada contenedor
 .b-chart {
     .chart {
-        &__logics {
-            margin-top: 8px;            
+        &__logics {            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         &__legend {
-            width: 100%;
-            margin-top: 12px;
-
+            margin-top: 8px;
             display: flex;
-            justify-content: flex-end;
-            flex-wrap: wrap;            
 
             &--item {
                 position: relative;
@@ -84,33 +82,62 @@ body, button {
                 font-style: normal;
                 font-weight: normal;
                 font-size: 0.9em;
-                line-height: 10px;    
+                line-height: 10px;                
 
-                padding-left: 18px;
-                margin-right: 18px;
+                &:first-child {
+                    padding-left: 14px;
+                    margin-right: 22px;
+                }
 
                 &:last-child {
+                    padding-left: 24px;
                     margin-right: 0px;
                 }
 
-                &::before {
+                //En función de la clase CSS que le acompañe, tendrá un color u otro
+                &.first::before {
                     position: absolute;
                     content: '';
                     top: 50%;
                     left: 0;
                     transform: translateY(-50%);
-                    width: 15px;
-                    height: 15px;
+                    width: 10px;
+                    height: 10px;
                     border-radius: 50%;
-                    background-color: #ccc; /* Este es el atributo a modificar */
-                }
-
-                //En función de la clase CSS que le acompañe, tendrá un color u otro
-                &.first::before {
                     background-color: #9E9E9E;
                 }
                 &.second::before {
-                    background-color: #5E5E5E;
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 18px;
+                    height: 2px;
+                    background-color: #296161;
+                }
+            }
+        }
+
+        &__animate {
+            margin-top: 8px;
+            height: 32px;
+            .btn_animate {
+                display: flex;
+                align-items: center;
+
+                width: auto;
+                height: 100%;
+                padding: 0px 6px;
+                border: 1.2px solid #41C0B4;
+                border-radius: 5px;
+
+                cursor: pointer;
+
+                font-size: 0.9rem;
+
+                img {
+                    margin-right: 3px;
                 }
             }
         }
@@ -145,14 +172,16 @@ body, button {
             font-size: 0.85em;
 
             .chart__source {
-                margin-right: 16px;
-
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
 
                 &--data, &--copyright {
                     margin-top: 8px;
+                }
+
+                &--data {
+                    margin-right: 16px;
                 }
 
                 &--data span {
