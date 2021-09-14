@@ -2,7 +2,7 @@ import html2canvas from 'html2canvas';
 let innerCanvas;
 
 function setChartCanvas() {
-    html2canvas(document.querySelector("#chartBlock"), {width: 768, height: 656, imageTimeout: 12000, useCORS: true}).then(canvas => { innerCanvas = canvas; });
+    html2canvas(document.querySelector("#chartBlock"), {width: document.querySelector("#chartBlock").clientWidth, height: document.querySelector("#chartBlock").clientHeight, imageTimeout: 12000, useCORS: true}).then(canvas => { innerCanvas = canvas; });
 }
 
 function setChartCanvasImage() {    
@@ -10,7 +10,7 @@ function setChartCanvasImage() {
     // Create a link
     var aDownloadLink = document.createElement('a');
     // Add the name of the file to the link
-    aDownloadLink.download = 'viz-maternidad-fecundidad.png';
+    aDownloadLink.download = 'evolucion-alzheimer-viz.png';
     // Attach the data to the link
     aDownloadLink.href = image;
     // Get the code to click the download link
