@@ -64,7 +64,7 @@ function initChart() {
 
         //Eje Y
         y_c = d3.scaleLinear()
-            .domain([0, 42])
+            .domain([0, 90])
             .range([height,0])
             .nice();
     
