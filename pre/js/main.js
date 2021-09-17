@@ -14,7 +14,7 @@ import * as d3_reg from 'd3-regression';
 import '../css/main.scss';
 
 ///// VISUALIZACIÓN DEL GRÁFICO //////
-let dataSource = 'https://raw.githubusercontent.com/EnvejecimientoEnRed/evolucion-alzheimer-viz/main/data/tasa_nal_alz.csv';
+let dataSource = 'https://raw.githubusercontent.com/EnvejecimientoEnRed/envejecimiento_alzheimer_evolucion/main/data/tasa_nal_alz.csv';
 let tooltip = d3.select('#tooltip');
 
 //Variables para visualización
