@@ -95,7 +95,7 @@ function initChart() {
         regressionGenerator = d3_reg.regressionLoess()
             .x(d => +d.periodo)
             .y(d => +d.tasa)
-            .bandwidth(0.3);
+            .bandwidth(0.27);
 
         path_1 = chart.append("path")
             .datum(regressionGenerator(innerData))
