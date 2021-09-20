@@ -29,6 +29,8 @@ function setChartHeight(iframe_fijo) {
     } else {
         document.getElementsByClassName('main')[0].style.height = document.getElementsByClassName('main')[0].clientHeight + 'px';
     }    
+
+    pymChild.sendHeight();
 }
 
 export { getIframeParams };
