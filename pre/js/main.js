@@ -160,7 +160,7 @@ function initChart() {
 
         setTimeout(() => {
             setChartCanvas(); 
-        }, 4000);
+        }, 6000);
     });
 }
 
